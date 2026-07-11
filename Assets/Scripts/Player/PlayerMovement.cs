@@ -5,14 +5,19 @@ public class PlayerMovement : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float speed;
 
+    private Player player;
+
     private PlayerActions actions;
     private Rigidbody2D rb;
     private Animator animator;
+
     private Vector2 moveDirection;
     private bool isMoving;
 
     private void Awake()
     {
+        player = GetComponent<Player>();
+
         actions = new PlayerActions();
         rb = GetComponent<Rigidbody2D>(); // 현재 게임 오브젝트에서 컴포넌트를 찾아 반환
         animator = GetComponent<Animator>();
@@ -54,6 +59,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        // 플레이어가 죽었다면 움직이지 않음
+        if (player.health.IsDead)
+            return;
+
         // MovePostion은 물리 법칙(힘, 속도 등)을 무시하고, 해당 좌표로 순간 이동하는 메소드로, Kinematic Ridigbody에서 주로 사용된다
         // rb.MovePosition(transform.position + (new Vector3(moveDirection.x, moveDirection.y, 0) * speed * Time.fixedDeltaTime)); // 비권장
 
