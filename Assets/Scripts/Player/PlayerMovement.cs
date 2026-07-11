@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerActions actions;
     private Rigidbody2D rb;
-    private Animator animator;
 
     private Vector2 moveDirection;
     private bool isMoving;
@@ -20,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
 
         actions = new PlayerActions();
         rb = GetComponent<Rigidbody2D>(); // 현재 게임 오브젝트에서 컴포넌트를 찾아 반환
-        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -50,11 +48,11 @@ public class PlayerMovement : MonoBehaviour
             isMoving = true;
 
             // 애니메이터 파라미터를 갱신하여 재생 애니메이션 변경
-            animator.SetFloat("xInput", moveDirection.x);
-            animator.SetFloat("yInput", moveDirection.y);
+            player.animator.SetFloat("xInput", moveDirection.x);
+            player.animator.SetFloat("yInput", moveDirection.y);
         }
 
-        animator.SetBool("isMoving", isMoving);
+        player.animator.SetBool("isMoving", isMoving);
     }
 
     private void Move()

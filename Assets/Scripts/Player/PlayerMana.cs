@@ -22,7 +22,7 @@ public class PlayerMana : MonoBehaviour
         }
     }
 
-    // 임시 코드
+    // TEMP
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))

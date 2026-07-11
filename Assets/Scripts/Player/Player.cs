@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     public PlayerMana mana;
     public PlayerStats stats;
 
+    public Animator animator;
+
     private void Awake()
     {
         if (movement == null)
@@ -17,11 +19,14 @@ public class Player : MonoBehaviour
 
         if (mana == null)
             mana = GetComponent<PlayerMana>();
+
+        if (animator == null)
+            animator = GetComponent<Animator>();
     }
 
+    // TEMP
     private void Start()
     {
-        // 임시 코드
         stats.Reset(); // 게임 시작 시 플레이어 스탯 초기화
     }
 }
