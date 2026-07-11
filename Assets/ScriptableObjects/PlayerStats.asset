@@ -15,3 +15,5 @@ MonoBehaviour:
   level: 1
   currentHealth: 10
   maxHealth: 10
+  currentMana: 5
+  maxMana: 5

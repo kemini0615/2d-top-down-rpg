@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     // 임시 코드
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.H))
         {
             TakeDamage(1);
         }
