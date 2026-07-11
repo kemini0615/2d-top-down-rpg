@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private Vector2 moveDirection;
+    private bool isMoving;
 
     private void Awake()
     {
@@ -33,13 +34,22 @@ public class PlayerMovement : MonoBehaviour
         // 'Move' 액션의 Action Type은 Value, Control Type은 Vector2
         moveDirection = actions.Movement.Move.ReadValue<Vector2>().normalized;
 
-        // 아무런 유저 입력이 없을 때를 제외하고(마지막으로 이동한 방향을 유지하기 위해)
-        if (moveDirection != Vector2.zero)
+        // 유저 입력이 없을 때: 마지막으로 입력한 방향 유지
+        if (moveDirection == Vector2.zero)
         {
-            // 애니메이터 파라미터를 갱신하여 통해 재생 애니메이션 변경
+            isMoving = false;
+        }
+        // 유저 입력이 있을 때
+        else
+        {
+            isMoving = true;
+
+            // 애니메이터 파라미터를 갱신하여 재생 애니메이션 변경
             animator.SetFloat("xInput", moveDirection.x);
             animator.SetFloat("yInput", moveDirection.y);
         }
+
+        animator.SetBool("isMoving", isMoving);
     }
 
     private void Move()
