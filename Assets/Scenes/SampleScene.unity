@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 220052193}
   - component: {fileID: 220052196}
   - component: {fileID: 220052198}
+  - component: {fileID: 220052199}
   - component: {fileID: 220052195}
   m_Layer: 0
   m_Name: Player
@@ -306,6 +307,7 @@ MonoBehaviour:
   health: {fileID: 220052196}
   mana: {fileID: 0}
   stats: {fileID: 11400000, guid: f139a98f4aa9c48cdad0b74e8f643913, type: 2}
+  animator: {fileID: 0}
 --- !u!114 &220052198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +320,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 279f59377d2de4ca0b5ba3bda6a2551a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMana
+--- !u!114 &220052199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220052190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad73dd3411b24d77a61d0099d270e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerExperience
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

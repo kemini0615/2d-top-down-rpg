@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 312846254f2e749a18174cac7115658d, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  level: 1
   currentHealth: 10
   maxHealth: 10
   currentMana: 5
   maxMana: 5
+  currentLevel: 3
+  currentExp: 9
+  maxExp: 102
+  initialMaxExp: 100
+  expMultiplier: 50
