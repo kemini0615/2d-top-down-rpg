@@ -4,6 +4,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Player player;
 
+    // TEMP
     private void Update()
     {
         // 플레이어 사망 시, R 키를 입력하면 부활
