@@ -950,7 +950,7 @@ GameObject:
   - component: {fileID: 220052198}
   - component: {fileID: 220052199}
   - component: {fileID: 220052195}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,6 +1365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 343265684}
   - component: {fileID: 343265685}
+  - component: {fileID: 343265686}
   - component: {fileID: 343265683}
   - component: {fileID: 343265682}
   - component: {fileID: 343265681}
@@ -1384,7 +1385,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343265679}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1557,8 +1558,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  states: []
-  initStateId: 
+  states:
+  - id: Wander
+    actions:
+    - {fileID: 343265686}
+    transitions: []
+  initStateId: Wander
+--- !u!114 &343265686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343265679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9e11ab89977478fb3ce19dd93bba63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WanderAction
+  wanderSpeed: 0.5
+  wanderDuration: 2
+  wanderRange: {x: 2, y: 2}
 --- !u!1 &355807153
 GameObject:
   m_ObjectHideFlags: 0
@@ -7058,6 +7078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 913770142}
   - component: {fileID: 913770143}
+  - component: {fileID: 913770144}
   - component: {fileID: 913770141}
   - component: {fileID: 913770138}
   - component: {fileID: 913770140}
@@ -7099,7 +7120,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913770137}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7250,8 +7271,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  states: []
-  initStateId: 
+  states:
+  - id: Wander
+    actions:
+    - {fileID: 913770144}
+    transitions: []
+  initStateId: Wander
+--- !u!114 &913770144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913770137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9e11ab89977478fb3ce19dd93bba63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WanderAction
+  wanderSpeed: 2
+  wanderDuration: 1
+  wanderRange: {x: 3, y: 3}
 --- !u!1 &917340802
 GameObject:
   m_ObjectHideFlags: 0
@@ -7592,6 +7632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995708487}
   - component: {fileID: 995708488}
+  - component: {fileID: 995708489}
   - component: {fileID: 995708486}
   - component: {fileID: 995708485}
   - component: {fileID: 995708484}
@@ -7611,7 +7652,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995708482}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7784,8 +7825,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  states: []
-  initStateId: 
+  states:
+  - id: Wander
+    actions:
+    - {fileID: 995708489}
+    transitions: []
+  initStateId: Wander
+--- !u!114 &995708489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995708482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9e11ab89977478fb3ce19dd93bba63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WanderAction
+  wanderSpeed: 0.5
+  wanderDuration: 2
+  wanderRange: {x: 2, y: 2}
 --- !u!1001 &1008931361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8115,6 +8175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1139866638}
   - component: {fileID: 1139866639}
+  - component: {fileID: 1139866640}
   - component: {fileID: 1139866637}
   - component: {fileID: 1139866636}
   - component: {fileID: 1139866635}
@@ -8134,7 +8195,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139866633}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -8307,8 +8368,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  states: []
-  initStateId: 
+  states:
+  - id: Wander
+    actions:
+    - {fileID: 1139866640}
+    transitions: []
+  initStateId: Wander
+--- !u!114 &1139866640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139866633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9e11ab89977478fb3ce19dd93bba63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WanderAction
+  wanderSpeed: 1
+  wanderDuration: 2
+  wanderRange: {x: 2.5, y: 2.5}
 --- !u!1001 &1141303837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35900,6 +35980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414364927}
   - component: {fileID: 1414364928}
+  - component: {fileID: 1414364929}
   - component: {fileID: 1414364926}
   - component: {fileID: 1414364925}
   - component: {fileID: 1414364924}
@@ -35919,7 +36000,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414364922}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -36092,8 +36173,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  states: []
-  initStateId: 
+  states:
+  - id: Wander
+    actions:
+    - {fileID: 1414364929}
+    transitions: []
+  initStateId: Wander
+--- !u!114 &1414364929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414364922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9e11ab89977478fb3ce19dd93bba63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WanderAction
+  wanderSpeed: 1
+  wanderDuration: 2
+  wanderRange: {x: 2.5, y: 2.5}
 --- !u!4 &1418786551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 678289950395262794, guid: 562cbeaa5484148aba2071b582d3a1ff, type: 3}
@@ -38402,6 +38502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1963465978}
   - component: {fileID: 1963465982}
+  - component: {fileID: 1963465983}
   - component: {fileID: 1963465977}
   - component: {fileID: 1963465981}
   - component: {fileID: 1963465980}
@@ -38495,7 +38596,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963465976}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -38597,12 +38698,27 @@ MonoBehaviour:
   states:
   - id: Wander
     actions:
-    - {fileID: 0}
+    - {fileID: 1963465983}
     transitions:
     - decision: {fileID: 0}
       trueStateId: Attack
       falseStateId: 
   initStateId: Wander
+--- !u!114 &1963465983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963465976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9e11ab89977478fb3ce19dd93bba63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WanderAction
+  wanderSpeed: 2
+  wanderDuration: 1
+  wanderRange: {x: 3, y: 3}
 --- !u!1001 &1968490134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39795,7 +39911,7 @@ SceneRoots:
   - {fileID: 355807154}
   - {fileID: 1963465978}
   - {fileID: 913770142}
-  - {fileID: 343265684}
   - {fileID: 1139866638}
   - {fileID: 1414364927}
+  - {fileID: 343265684}
   - {fileID: 995708487}
