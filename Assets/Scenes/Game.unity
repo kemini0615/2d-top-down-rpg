@@ -1364,6 +1364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 343265684}
+  - component: {fileID: 343265685}
   - component: {fileID: 343265683}
   - component: {fileID: 343265682}
   - component: {fileID: 343265681}
@@ -1544,6 +1545,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &343265685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343265679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  states: []
+  initStateId: 
 --- !u!1 &355807153
 GameObject:
   m_ObjectHideFlags: 0
@@ -7042,6 +7057,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 913770142}
+  - component: {fileID: 913770143}
   - component: {fileID: 913770141}
   - component: {fileID: 913770138}
   - component: {fileID: 913770140}
@@ -7222,6 +7238,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &913770143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913770137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  states: []
+  initStateId: 
 --- !u!1 &917340802
 GameObject:
   m_ObjectHideFlags: 0
@@ -7561,6 +7591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 995708487}
+  - component: {fileID: 995708488}
   - component: {fileID: 995708486}
   - component: {fileID: 995708485}
   - component: {fileID: 995708484}
@@ -7741,6 +7772,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &995708488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995708482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  states: []
+  initStateId: 
 --- !u!1001 &1008931361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8069,6 +8114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1139866638}
+  - component: {fileID: 1139866639}
   - component: {fileID: 1139866637}
   - component: {fileID: 1139866636}
   - component: {fileID: 1139866635}
@@ -8249,6 +8295,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1139866639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139866633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  states: []
+  initStateId: 
 --- !u!1001 &1141303837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35839,6 +35899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1414364927}
+  - component: {fileID: 1414364928}
   - component: {fileID: 1414364926}
   - component: {fileID: 1414364925}
   - component: {fileID: 1414364924}
@@ -36019,6 +36080,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414364928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414364922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  states: []
+  initStateId: 
 --- !u!4 &1418786551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 678289950395262794, guid: 562cbeaa5484148aba2071b582d3a1ff, type: 3}
@@ -38326,6 +38401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1963465978}
+  - component: {fileID: 1963465982}
   - component: {fileID: 1963465977}
   - component: {fileID: 1963465981}
   - component: {fileID: 1963465980}
@@ -38506,6 +38582,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1963465982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963465976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf0d644318d84360a37f09f5950f016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  states:
+  - id: Wander
+    actions:
+    - {fileID: 0}
+    transitions:
+    - decision: {fileID: 0}
+      trueStateId: Attack
+      falseStateId: 
+  initStateId: Wander
 --- !u!1001 &1968490134
 PrefabInstance:
   m_ObjectHideFlags: 0
