@@ -348,7 +348,7 @@ Transform:
   m_GameObject: {fileID: 52924758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.14573, y: 1.73008, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1577,7 +1577,7 @@ Transform:
   m_GameObject: {fileID: 343265679}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.85427, y: 5.26992, z: 0}
+  m_LocalPosition: {x: -34, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7290,7 +7290,7 @@ Transform:
   m_GameObject: {fileID: 913770137}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.35427, y: -0.98008, z: 0}
+  m_LocalPosition: {x: -16.5, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7844,7 +7844,7 @@ Transform:
   m_GameObject: {fileID: 995708482}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.10427, y: 8.26992, z: 0}
+  m_LocalPosition: {x: -32.25, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8387,7 +8387,7 @@ Transform:
   m_GameObject: {fileID: 1139866633}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.85427, y: -2.2300801, z: 0}
+  m_LocalPosition: {x: -26, y: -0.5000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36192,7 +36192,7 @@ Transform:
   m_GameObject: {fileID: 1414364922}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.60427, y: 1.51992, z: 0}
+  m_LocalPosition: {x: -35.75, y: 3.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38620,7 +38620,7 @@ Transform:
   m_GameObject: {fileID: 1963465976}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.10427, y: 7.51992, z: 0}
+  m_LocalPosition: {x: -15.25, y: 9.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38770,10 +38770,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Waypoint
   points:
-  - {x: -1.9040241, y: 1.8560362, z: 0}
-  - {x: 1.6640825, y: 1.4481354, z: 0}
-  - {x: -1.5201187, y: -1.1602077, z: 0}
-  - {x: 1.3041725, y: -2.1679592, z: 0}
+  - {x: -2.0316925, y: 2.0846004, z: 0}
+  - {x: 1.9523344, y: 1.9523315, z: 0}
+  - {x: -1.8994255, y: -2.0581489, z: 0}
+  - {x: 2.0316944, y: -2.0846024, z: 0}
 --- !u!1001 &1968490134
 PrefabInstance:
   m_ObjectHideFlags: 0

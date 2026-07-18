@@ -42,7 +42,7 @@ public class WaypointEditor : Editor
         Handles.color = Color.red;
         for (int i = 0; i < targetWaypoint.Points.Length; i++)
         {
-            // 유저가 GUI 컨트롤(버튼, 핸들 등)을 조작해서 값이 바뀌는지 감지 시작
+            // 유저가 GUI 컨트롤(버튼, 핸들 등)을 조작해서 값이 바뀌는지 감지 시작  (※컨트롤이란 유저가 상호작용 가능한 요소를 의미한다)
             // 아래쪽에 있는 EndChangeCheck()와 한 쌍으로, "값이 바뀌었는지 여부"를 bool로 받기 위한 준비 단계
             EditorGUI.BeginChangeCheck();
 

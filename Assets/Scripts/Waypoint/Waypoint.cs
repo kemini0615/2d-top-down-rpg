@@ -14,5 +14,14 @@ public class Waypoint : MonoBehaviour
     private void Start()
     {
         EntityPosition = transform.position;
+        gameStarted = true;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (!gameStarted)
+        {
+            EntityPosition = transform.position;
+        }
     }
 }
