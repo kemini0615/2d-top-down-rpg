@@ -6,9 +6,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private State[] states;
     [SerializeField] private string initStateId;
 
-    public Transform PlayerTransform { get; set; }
-
     public State CurrentState { get; private set; }
+
+    public Transform PlayerTransform { get; set; }
 
     private void Start()
     {
