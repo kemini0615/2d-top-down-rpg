@@ -1403,6 +1403,7 @@ GameObject:
   - component: {fileID: 343265684}
   - component: {fileID: 343265685}
   - component: {fileID: 343265686}
+  - component: {fileID: 343265687}
   - component: {fileID: 343265683}
   - component: {fileID: 343265682}
   - component: {fileID: 343265681}
@@ -1599,7 +1600,16 @@ MonoBehaviour:
   - id: Wander
     actions:
     - {fileID: 343265686}
-    transitions: []
+    transitions:
+    - decision: {fileID: 343265687}
+      trueStateId: Chase
+      falseStateId: 
+  - id: Chase
+    actions: []
+    transitions:
+    - decision: {fileID: 343265687}
+      trueStateId: 
+      falseStateId: Wander
   initStateId: Wander
 --- !u!114 &343265686
 MonoBehaviour:
@@ -1616,6 +1626,22 @@ MonoBehaviour:
   wanderSpeed: 0.5
   wanderDuration: 2
   wanderRange: {x: 2, y: 2}
+--- !u!114 &343265687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343265679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203930cba0bb4b94db8f0f89354d7e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectPlayerDecision
+  detectRange: 5
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &355807153
 GameObject:
   m_ObjectHideFlags: 0
@@ -7116,6 +7142,7 @@ GameObject:
   - component: {fileID: 913770142}
   - component: {fileID: 913770143}
   - component: {fileID: 913770144}
+  - component: {fileID: 913770146}
   - component: {fileID: 913770145}
   - component: {fileID: 913770141}
   - component: {fileID: 913770138}
@@ -7313,7 +7340,16 @@ MonoBehaviour:
   - id: Patrol
     actions:
     - {fileID: 913770144}
-    transitions: []
+    transitions:
+    - decision: {fileID: 913770146}
+      trueStateId: Chase
+      falseStateId: 
+  - id: Chase
+    actions: []
+    transitions:
+    - decision: {fileID: 913770146}
+      trueStateId: 
+      falseStateId: Patrol
   initStateId: Patrol
 --- !u!114 &913770144
 MonoBehaviour:
@@ -7346,6 +7382,22 @@ MonoBehaviour:
   - {x: 1.5, y: -4.5, z: 0}
   - {x: -1.5, y: -1, z: 0}
   - {x: -2, y: 2, z: 0}
+--- !u!114 &913770146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913770137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203930cba0bb4b94db8f0f89354d7e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectPlayerDecision
+  detectRange: 5
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &917340802
 GameObject:
   m_ObjectHideFlags: 0
@@ -7687,6 +7739,7 @@ GameObject:
   - component: {fileID: 995708487}
   - component: {fileID: 995708488}
   - component: {fileID: 995708489}
+  - component: {fileID: 995708490}
   - component: {fileID: 995708486}
   - component: {fileID: 995708485}
   - component: {fileID: 995708484}
@@ -7883,7 +7936,16 @@ MonoBehaviour:
   - id: Wander
     actions:
     - {fileID: 995708489}
-    transitions: []
+    transitions:
+    - decision: {fileID: 995708490}
+      trueStateId: Chase
+      falseStateId: 
+  - id: Chase
+    actions: []
+    transitions:
+    - decision: {fileID: 995708490}
+      trueStateId: 
+      falseStateId: Wander
   initStateId: Wander
 --- !u!114 &995708489
 MonoBehaviour:
@@ -7900,6 +7962,22 @@ MonoBehaviour:
   wanderSpeed: 0.5
   wanderDuration: 2
   wanderRange: {x: 2, y: 2}
+--- !u!114 &995708490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995708482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203930cba0bb4b94db8f0f89354d7e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectPlayerDecision
+  detectRange: 5
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1001 &1008931361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8230,6 +8308,7 @@ GameObject:
   - component: {fileID: 1139866638}
   - component: {fileID: 1139866639}
   - component: {fileID: 1139866640}
+  - component: {fileID: 1139866642}
   - component: {fileID: 1139866641}
   - component: {fileID: 1139866637}
   - component: {fileID: 1139866636}
@@ -8427,7 +8506,16 @@ MonoBehaviour:
   - id: Patrol
     actions:
     - {fileID: 1139866640}
-    transitions: []
+    transitions:
+    - decision: {fileID: 1139866642}
+      trueStateId: Chase
+      falseStateId: 
+  - id: Chase
+    actions: []
+    transitions:
+    - decision: {fileID: 1139866642}
+      trueStateId: 
+      falseStateId: Patrol
   initStateId: Patrol
 --- !u!114 &1139866640
 MonoBehaviour:
@@ -8458,6 +8546,22 @@ MonoBehaviour:
   - {x: 4.5, y: 1, z: 0}
   - {x: 3.5, y: -1.4999999, z: 0}
   - {x: -0.5, y: 0.00000011920929, z: 0}
+--- !u!114 &1139866642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139866633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203930cba0bb4b94db8f0f89354d7e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectPlayerDecision
+  detectRange: 5
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1001 &1141303837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36050,6 +36154,7 @@ GameObject:
   - component: {fileID: 1414364927}
   - component: {fileID: 1414364928}
   - component: {fileID: 1414364929}
+  - component: {fileID: 1414364931}
   - component: {fileID: 1414364930}
   - component: {fileID: 1414364926}
   - component: {fileID: 1414364925}
@@ -36247,7 +36352,16 @@ MonoBehaviour:
   - id: Patrol
     actions:
     - {fileID: 1414364929}
-    transitions: []
+    transitions:
+    - decision: {fileID: 1414364931}
+      trueStateId: Chase
+      falseStateId: 
+  - id: Chase
+    actions: []
+    transitions:
+    - decision: {fileID: 1414364931}
+      trueStateId: 
+      falseStateId: Patrol
   initStateId: Patrol
 --- !u!114 &1414364929
 MonoBehaviour:
@@ -36278,6 +36392,22 @@ MonoBehaviour:
   - {x: 3, y: 2, z: 0}
   - {x: 4, y: -0.5, z: 0}
   - {x: 0, y: 0.5, z: 0}
+--- !u!114 &1414364931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414364922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203930cba0bb4b94db8f0f89354d7e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectPlayerDecision
+  detectRange: 5
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!4 &1418786551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 678289950395262794, guid: 562cbeaa5484148aba2071b582d3a1ff, type: 3}
@@ -38587,6 +38717,7 @@ GameObject:
   - component: {fileID: 1963465978}
   - component: {fileID: 1963465982}
   - component: {fileID: 1963465983}
+  - component: {fileID: 1963465985}
   - component: {fileID: 1963465984}
   - component: {fileID: 1963465977}
   - component: {fileID: 1963465981}
@@ -38784,7 +38915,16 @@ MonoBehaviour:
   - id: Patrol
     actions:
     - {fileID: 1963465983}
-    transitions: []
+    transitions:
+    - decision: {fileID: 1963465985}
+      trueStateId: Chase
+      falseStateId: 
+  - id: Chase
+    actions: []
+    transitions:
+    - decision: {fileID: 1963465985}
+      trueStateId: 
+      falseStateId: Patrol
   initStateId: Patrol
 --- !u!114 &1963465983
 MonoBehaviour:
@@ -38816,6 +38956,22 @@ MonoBehaviour:
   - {x: 1, y: -1, z: 0}
   - {x: -2.5, y: -1.5, z: 0}
   - {x: -3, y: 1, z: 0}
+--- !u!114 &1963465985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963465976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203930cba0bb4b94db8f0f89354d7e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectPlayerDecision
+  detectRange: 5
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1001 &1968490134
 PrefabInstance:
   m_ObjectHideFlags: 0

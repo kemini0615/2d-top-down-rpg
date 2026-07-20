@@ -10,18 +10,21 @@ public class State
     public void UpdateState(EnemyController enemyController)
     {
         ExecuteActions();
-        ExecuteTransisions(enemyController); // TODO: 의존성 프로퍼티화?
+        ExecuteTransitions(enemyController); // TODO: 의존성 프로퍼티화?
     }
 
     private void ExecuteActions()
     {
+        if (actions == null || actions.Length == 0)
+            return;
+
         foreach (Action action in actions)
         {
             action.Act();
         }
     }
 
-    private void ExecuteTransisions(EnemyController enemyController)
+    private void ExecuteTransitions(EnemyController enemyController)
     {
         if (transitions == null || transitions.Length == 0)
             return;
@@ -34,7 +37,7 @@ public class State
             }
             else
             {
-                enemyController.ChangeState(transition.falseStateId); // TODO: 필요한가?
+                enemyController.ChangeState(transition.falseStateId);
             }
         }
 
