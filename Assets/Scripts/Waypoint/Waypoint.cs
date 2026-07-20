@@ -17,6 +17,11 @@ public class Waypoint : MonoBehaviour
         gameStarted = true;
     }
 
+    public Vector3 CalcPointPosition(int pointIndex)
+    {
+        return points[pointIndex] + EntityPosition;
+    }
+
     private void OnDrawGizmos()
     {
         if (!gameStarted)
