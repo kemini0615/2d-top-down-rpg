@@ -59,7 +59,10 @@ public class PlayerMovement : MonoBehaviour
     {
         // 플레이어가 죽었다면 움직이지 않음
         if (player.health.IsDead)
+        {
+            rb.linearVelocity = Vector2.zero;
             return;
+        }
 
         // MovePostion은 물리 법칙(힘, 속도 등)을 무시하고, 해당 좌표로 순간 이동하는 메소드로, Kinematic Ridigbody에서 주로 사용된다
         // rb.MovePosition(transform.position + (new Vector3(moveDirection.x, moveDirection.y, 0) * speed * Time.fixedDeltaTime)); // 비권장

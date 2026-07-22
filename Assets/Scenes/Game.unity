@@ -1065,8 +1065,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 519420032}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &220052193
@@ -1404,6 +1403,7 @@ GameObject:
   - component: {fileID: 343265685}
   - component: {fileID: 343265686}
   - component: {fileID: 343265688}
+  - component: {fileID: 343265690}
   - component: {fileID: 343265687}
   - component: {fileID: 343265689}
   - component: {fileID: 343265683}
@@ -1617,7 +1617,8 @@ MonoBehaviour:
       trueStateId: Attack
       falseStateId: 
   - id: Attack
-    actions: []
+    actions:
+    - {fileID: 343265690}
     transitions:
     - decision: {fileID: 343265689}
       trueStateId: 
@@ -1679,10 +1680,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887b3e248b28f4091bce0fe22e121589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackPlayerDecision
-  attackRange: 2
+  attackRange: 1.5
   playerMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &343265690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343265679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88536582f3fcf4910a68fc00ea51c5a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackAction
+  damage: 5
+  cooldown: 3
 --- !u!1 &355807153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2179,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2258,7 +2274,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2283,12 +2299,44 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 220052192}
+  m_Father: {fileID: 2004149555}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBrain
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 2
+  BlendUpdateMethod: 1
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 1
+    Time: 2
+    CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CustomBlends: {fileID: 0}
 --- !u!1001 &553836327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3005,6 +3053,113 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &617494564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617494566}
+  - component: {fileID: 617494565}
+  - component: {fileID: 617494567}
+  m_Layer: 0
+  m_Name: CinemachineCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &617494565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617494564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 220052192}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 34
+    OrthographicSize: 6
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!4 &617494566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617494564}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2004149555}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617494567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617494564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachinePositionComposer
+  CameraDistance: 5
+  DeadZoneDepth: 0
+  Composition:
+    ScreenPosition: {x: 0, y: 0}
+    DeadZone:
+      Enabled: 0
+      Size: {x: 0.2, y: 0.2}
+    HardLimits:
+      Enabled: 0
+      Size: {x: 0.8, y: 0.8}
+      Offset: {x: 0, y: 0}
+  CenterOnActivate: 1
+  TargetOffset: {x: 0, y: 0, z: 0}
+  Damping: {x: 0, y: 0, z: 0}
+  Lookahead:
+    Enabled: 0
+    Time: 0
+    Smoothing: 0
+    IgnoreY: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -6974,7 +7129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &857112635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7184,6 +7339,7 @@ GameObject:
   - component: {fileID: 913770143}
   - component: {fileID: 913770144}
   - component: {fileID: 913770147}
+  - component: {fileID: 913770149}
   - component: {fileID: 913770146}
   - component: {fileID: 913770148}
   - component: {fileID: 913770145}
@@ -7398,7 +7554,8 @@ MonoBehaviour:
       trueStateId: Attack
       falseStateId: 
   - id: Attack
-    actions: []
+    actions:
+    - {fileID: 913770149}
     transitions:
     - decision: {fileID: 913770148}
       trueStateId: 
@@ -7476,10 +7633,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887b3e248b28f4091bce0fe22e121589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackPlayerDecision
-  attackRange: 2
+  attackRange: 1.5
   playerMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &913770149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913770137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88536582f3fcf4910a68fc00ea51c5a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackAction
+  damage: 2
+  cooldown: 2
 --- !u!1 &917340802
 GameObject:
   m_ObjectHideFlags: 0
@@ -7822,6 +7993,7 @@ GameObject:
   - component: {fileID: 995708488}
   - component: {fileID: 995708489}
   - component: {fileID: 995708491}
+  - component: {fileID: 995708493}
   - component: {fileID: 995708490}
   - component: {fileID: 995708492}
   - component: {fileID: 995708486}
@@ -8035,7 +8207,8 @@ MonoBehaviour:
       trueStateId: Attack
       falseStateId: 
   - id: Attack
-    actions: []
+    actions:
+    - {fileID: 995708493}
     transitions:
     - decision: {fileID: 995708492}
       trueStateId: 
@@ -8097,10 +8270,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887b3e248b28f4091bce0fe22e121589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackPlayerDecision
-  attackRange: 2
+  attackRange: 1.5
   playerMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &995708493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995708482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88536582f3fcf4910a68fc00ea51c5a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackAction
+  damage: 5
+  cooldown: 3
 --- !u!1001 &1008931361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8432,6 +8619,7 @@ GameObject:
   - component: {fileID: 1139866639}
   - component: {fileID: 1139866640}
   - component: {fileID: 1139866643}
+  - component: {fileID: 1139866645}
   - component: {fileID: 1139866642}
   - component: {fileID: 1139866644}
   - component: {fileID: 1139866641}
@@ -8646,7 +8834,8 @@ MonoBehaviour:
       trueStateId: Attack
       falseStateId: 
   - id: Attack
-    actions: []
+    actions:
+    - {fileID: 1139866645}
     transitions:
     - decision: {fileID: 1139866644}
       trueStateId: 
@@ -8722,10 +8911,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887b3e248b28f4091bce0fe22e121589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackPlayerDecision
-  attackRange: 2
+  attackRange: 1.5
   playerMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &1139866645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139866633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88536582f3fcf4910a68fc00ea51c5a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackAction
+  damage: 1
+  cooldown: 3
 --- !u!1001 &1141303837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36319,6 +36522,7 @@ GameObject:
   - component: {fileID: 1414364928}
   - component: {fileID: 1414364929}
   - component: {fileID: 1414364932}
+  - component: {fileID: 1414364934}
   - component: {fileID: 1414364931}
   - component: {fileID: 1414364933}
   - component: {fileID: 1414364930}
@@ -36533,7 +36737,8 @@ MonoBehaviour:
       trueStateId: Attack
       falseStateId: 
   - id: Attack
-    actions: []
+    actions:
+    - {fileID: 1414364934}
     transitions:
     - decision: {fileID: 1414364933}
       trueStateId: 
@@ -36609,10 +36814,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887b3e248b28f4091bce0fe22e121589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackPlayerDecision
-  attackRange: 2
+  attackRange: 1.5
   playerMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &1414364934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414364922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88536582f3fcf4910a68fc00ea51c5a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackAction
+  damage: 3
+  cooldown: 1
 --- !u!4 &1418786551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 678289950395262794, guid: 562cbeaa5484148aba2071b582d3a1ff, type: 3}
@@ -38923,6 +39142,7 @@ GameObject:
   - component: {fileID: 1963465982}
   - component: {fileID: 1963465983}
   - component: {fileID: 1963465986}
+  - component: {fileID: 1963465988}
   - component: {fileID: 1963465985}
   - component: {fileID: 1963465987}
   - component: {fileID: 1963465984}
@@ -39137,7 +39357,8 @@ MonoBehaviour:
       trueStateId: Attack
       falseStateId: 
   - id: Attack
-    actions: []
+    actions:
+    - {fileID: 1963465988}
     transitions:
     - decision: {fileID: 1963465987}
       trueStateId: 
@@ -39214,10 +39435,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887b3e248b28f4091bce0fe22e121589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackPlayerDecision
-  attackRange: 2
+  attackRange: 1.5
   playerMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &1963465988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963465976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88536582f3fcf4910a68fc00ea51c5a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackAction
+  damage: 2
+  cooldown: 2
 --- !u!1001 &1968490134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39461,6 +39696,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8601603257067289208, guid: cc296c4e65a124aff8207039e2da649d, type: 3}
   m_PrefabInstance: {fileID: 1997364083}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2004149554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2004149555}
+  m_Layer: 0
+  m_Name: Cameras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2004149555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004149554}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 519420032}
+  - {fileID: 617494566}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2024085324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40401,6 +40669,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2004149555}
   - {fileID: 619394802}
   - {fileID: 1365370471}
   - {fileID: 220052192}

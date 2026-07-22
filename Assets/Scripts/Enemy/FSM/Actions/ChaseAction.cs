@@ -14,6 +14,12 @@ public class ChaseAction : Action
 
     public override void Act()
     {
+        // 플레이어 추적
+        ChasePlayer();
+    }
+
+    private void ChasePlayer()
+    {
         if (enemyController.PlayerTransform == null)
             return;
 

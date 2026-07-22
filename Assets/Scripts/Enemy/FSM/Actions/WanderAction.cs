@@ -16,6 +16,12 @@ public class WanderAction : Action
 
     public override void Act()
     {
+        // 주변 배회
+        Wander();
+    }
+
+    private void Wander()
+    {
         timer -= Time.deltaTime;
         Vector3 wanderDirection = (targetPosition - transform.position).normalized;
 
